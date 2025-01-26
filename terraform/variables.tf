@@ -4,3 +4,7 @@ variable "region" {
 
 variable "account_id" {
 }
+
+variable "desired_count" {
+  default = 1
+}

@@ -54,7 +54,7 @@ resource "aws_ecs_service" "frontend" {
   name            = "frontend-service"
   cluster         = aws_ecs_cluster.main.id
   launch_type     = "FARGATE"
-  desired_count   = 1
+  desired_count   = var.desired_count
   task_definition = aws_ecs_task_definition.frontend.arn
 
   network_configuration {
@@ -74,7 +74,7 @@ resource "aws_ecs_service" "service_a" {
   name            = "service-a-service"
   cluster         = aws_ecs_cluster.main.id
   launch_type     = "FARGATE"
-  desired_count   = 1
+  desired_count   = var.desired_count
   task_definition = aws_ecs_task_definition.service_a.arn
 
   network_configuration {
@@ -94,7 +94,7 @@ resource "aws_ecs_service" "service_b" {
   name            = "service-b-service"
   cluster         = aws_ecs_cluster.main.id
   launch_type     = "FARGATE"
-  desired_count   = 1
+  desired_count   = var.desired_count
   task_definition = aws_ecs_task_definition.service_b.arn
 
   network_configuration {
