@@ -1,2 +1,4 @@
 ECS マイクロサービスアーキテクチャ検討
 https://zenn.dev/hiyanger/scraps/0e21a1f60b7892
+
+フロントエンドからALBを経由してバックエンドに接続
